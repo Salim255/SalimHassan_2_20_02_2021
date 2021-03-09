@@ -1,5 +1,5 @@
 
-.navbar{/**donner la proprite flex au navbar et centraliser le continu*/
+.navbar{
     display:flex;
     align-items:center;
    
@@ -201,9 +201,12 @@ input {
     background-color: #F2F2F2;
     flex-flow: wrap;
     border-radius: 20px;
-    flex-basis: 830.5px;
-    padding:10px;
+    flex-basis: 65%;
+   
     margin-top:5px;
+    padding-top:20px;
+   min-height:600px;
+    
 }
 #left .item-1 {
         margin-left: 5px;
@@ -214,8 +217,8 @@ input {
 }
 
  #left img {
-        width: 250px;
-        height: 120px;
+        width: 240px;
+        height: 130px;
         object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -234,7 +237,7 @@ input {
 /**rating....*/
 .rating {
     margin-left: 5px;
-    margin-bottom: -10px;
+    margin-bottom:-10px;
 }
 
 .rating .fontstyle {
@@ -268,17 +271,19 @@ aside {
     background-color: #F2F2F2;
     flex-flow: wrap;
     border-radius: 25px;
-    flex-basis: 400px;
+    flex-basis: 33%;
     padding-bottom:20px;
   
 }
 
  aside img {
-        width: 140px;
-        height: 140px;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        padding: 5px;
+        width: 150px;
+        height: 150px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin-bottom:-5px;
+        padding-right:10px;
+        padding-left:2px;
         object-fit: cover
     }
 
@@ -291,14 +296,17 @@ aside {
     margin-right: 25px;
     margin-left: 25px;
 }
-
+.aside figcaption div{
+   
+    margin-left:-1px;
+}
 .aside-child {
     display: flex;
     align-items: center;
     flex-basis: 400px;
-    width: 160px;
     margin: 5px;
-    border-radius: 10px;
+ 
+    border-radius: 15px;
 } 
 
 #aside-title {
@@ -317,23 +325,25 @@ aside {
 
 /* --/ Marseile logment*/
 /*Marseile activites side*/
-#activite  {
+#activite {
     display: flex;
-    flex-direction: row ;
-    flex-wrap:wrap;
-   justify-content:space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content:space-around;
+  
 }
 
 .margin-none{
     margin:0;
 }
 
- #activite img {
+#activite img {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         width: 280px;
         object-fit:cover;
-    }
+ }
 .activite-child {
     display: flex;
     flex-direction: column;
@@ -351,7 +361,7 @@ aside {
     margin-top:-11px;
     margin-bottom:10px;
 }
- .column2-1 img {
+.column2-1 img {
        height: 140px;
        object-fit: none;
        object-position: 10% 40%;
@@ -420,7 +430,7 @@ aside {
 
 
 .imgg {
-    width: 280px;
+    flex-basis: 280px;
     height: 330px;
     object-fit: none;
     object-position:49% 20% ;
@@ -480,123 +490,438 @@ footer {
   
 }
 
-/**version ipad*/
-@media only screen  and (max-width:800px) and (min-width:650px){
-    #left img {
-        width: 314px;
-        height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-    .rating{
-        margin-bottom:5px;
-    }
-    aside {
-     
-        margin-top:30px;
+/*laptop  version*/
+@media only screen and (min-width:1131px) and (max-width:1320px) {
+    #left {
+        flex-basis: 100%;
+        justify-content: center;
     }
 
-    aside img {
-            width: 300px;
-            height: 280px;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            padding: 5px;
+     #left img {
+            width: 314px;
+            height: 150px;
             object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+     }
 
+    .rating {
+        margin-bottom: 5px;
     }
 
-    #aside-title{
-        margin-bottom:5px;
+    /**aside*/
+    aside {
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 30px;
     }
     .aside-child {
         display: flex;
+        flex-direction:column;
         align-items: center;
-        flex-basis: 650px;
-        width: 650px;
-        margin: 5px;
-        border-radius: 10px;
-    } 
+        flex-basis: 290px;      
+        
+    }
 
+  
+    aside img {
+        display: flex;
+        width: 289px;
+        height: 200px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius: unset;
+        margin-right:-12px;
+        margin-left:-4px;
+        padding-top:1px;
+        object-fit: cover;
+    }
+    .aside figcaption {
+       
+        margin-left:-90px;
+    }
+    aside figcaption p {
+        margin-bottom:-10px;
+    
+    }
+    aside figcaption div{
+        margin-top:10px;
+    }
+    .exclu {
+            margin-right: -90px;
+     }
+
+    #aside-title {
+        margin-bottom: 5px;
+    }
     #title1 + figure img {
- 
     }
 
     /***activite */
+    .card-2 {
+        margin: 0;
+    }
+
+
+    .activite-child {
+        flex-flow: column;
+    }
+
+    #activite img {
+        width: 320px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+
+    .zero {
+        order: 0;
+    }
+
+    .one {
+        order: 2;
+       margin-left:-30px;
+       margin-bottom:30px;
+    }
+
+    .two {
+        order: 1;
+        margin-bottom:30px;
+        margin-left:70px;
+      
+    }
+
+    .column2-1 {
+     margin-right:50px;
+
+    }
+
+    .three {
+        order: 3;
+        margin-top:30px;
+        margin-bottom:-30px;
+
+    }
+
+    .four {
+        order: 4;
+        margin-left:-150px;
+        margin-top:30px;
+        margin-bottom:-30px;
+        
+    }
+
+    .column4-1 {
+       margin-right:60px;
+    }
+    .column4-2 {
+        margin-right: -20px;
+    }
+
+    .activite-child {
+        flex-direction: row;
+        
+    }
+
+    #activite {
+        margin-left:-20px;
+        justify-content: space-around;
+    }
+
+}
+
+
+/**laptop version-2 */
+@media only screen and (max-width:1130px) and (min-width:800px) {
+
+    #left {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    #left img {
+            width: 314px;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+    }
+
+    .rating {
+        margin-bottom: 5px;
+    }
+
+    aside {
+        flex-basis: 100%;
+        justify-content:  center;
+        margin-top: 30px;
+    }
+    .aside > figure{
+         margin-left:-10px;
+       
+    }
+
+    .aside-child {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        flex-basis: 220px;
+        margin-left:-20px;
    
+    }
+    aside img {
+        display: flex;
+        width: 220px;
+        height: 150px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: unset;
+        margin-top: 2px;
+        margin-left: -10px;
+        margin-right: -18px;
+        object-fit: cover;
+    }
+
+  
+    .inclu {
+       margin-left:-25px;
+    }
+    .exclu{
+        margin-left:5px;
+    }
+    .exclu p{
+        margin-bottom:-10px;
+    }
+    .exclu div{
+       
+        margin-top:15px;
+    }
+    
+    #aside-title {
+        margin-bottom: 5px;
+    }
+    #title1 + figure img {
+    }
+
+    /***activite */
+
 
     .card-2 {
         margin: 0;
     }
- 
+
+    .activite-child {
+        flex-flow: column;
+    }
+
     #activite img {
         width: 340px;
-        height: 250px;
+        height: 200px;
         object-fit: cover;
     }
 
     .zero {
         order: 0;
     }
-    .one{
-        order:2;
-        margin-right:20px;
-    }
- 
-    .two{
-        order:1;
-       margin-bottom:-10px;
 
+    .one {
+        order: 2;
+        margin-right: 10px;
     }
-    .column2-1{
-        margin-right:20px;
+
+    .two {
+        order: 1;
+        margin-bottom: -10px;
+    }
+
+    .column2-1 {
+        margin-right: 20px;
     }
 
     .three {
         order: 3;
+        margin-left: 10px;
     }
+
     .four {
         order: 4;
         margin-top: 30px;
         margin-left: -42px;
     }
-    .column4-1{
-        margin-right:20px;
-            
+
+    .column4-1 {
+        margin-right: 20px;
     }
 
     .activite-child {
-        
         flex-direction: row;
-     
+    }
+
+    #activite {
+        justify-content: center;
+    }
+
+    #activite > figure {
+            margin-top: 40px;
+    }
+}
+
+/****version ipad*/
+@media only screen and (max-width:799px) and (min-width:681px) {
+  
+    #left {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    #left img {
+            width: 270px;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+    }
+
+    .rating {
+        margin-bottom: 5px;
+    }
+
+    /**aside*/
+    aside {
+        background-color:unset;
+        flex-basis: 100%;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    .aside > figure {
+        margin:0;
+    }
+
+    .aside-child {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        flex-basis: 180px;
+        
+    }
+
+    #child-med{
+      
+        margin-left:20px;
+        margin-right:20px;
     }
 
 
+    aside img {
+        display: flex;
+        width: 180px;
+        height: 140px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: unset;
+        margin-top: 1px;
+        margin-left: -18px;
+        margin-right: -25px;
+        object-fit: cover;
+    }
+    
+   .exclu div {
+             margin-top: -15px;
+            margin-bottom:2px;
+   }
+
+    #aside-title {
+        margin-bottom: 5px;
+    }
+    #title1 + figure img {
+    }
+
+    /***activite */
+
+
+    .card-2 {
+        margin: 0;
+    }
+
+    .activite-child {
+        flex-flow: column;
+    }
+
+    #activite img {
+        width: 280px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .zero {
+        order: 0;
+    }
+
+    .one {
+        order: 2;
+        margin-right: 10px;
+    }
+
+    .two {
+        order: 1;
+        margin-bottom: -10px;
+    }
+
+    .column2-1 {
+        margin-right: 20px;
+    }
+
+    .three {
+        order: 3;
+        margin-left: 10px;
+    }
+
+    .four {
+        order: 4;
+        margin-top: 30px;
+        margin-left: -42px;
+    }
+
+    .column4-1 {
+        margin-right: 20px;
+    }
+
+    .activite-child {
+        flex-direction: row;
+    }
+
+    #activite {
+        justify-content: center;
+    }
+
     #activite > figure {
-        margin-top: 40px;
+            margin-top: 40px;
     }
 }
 
 /***Moblie version*********************************************************************************************************/
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:680px) {
+    .marseille-logement {
+    }
+
     .rating {
-       margin-left: 10px;
+        margin-left: 10px;
         margin-bottom: 2px;
     }
 
-    .filter > div{
-        margin-left:-5px;
+    .filter > div {
+        margin-left: -5px;
     }
 
     .margin-none {
         margin: unset;
     }
-    
- 
-    #activite{
-       margin-left:5px;
-        
+
+
+    #activite {
+        margin-left: 5px;
     }
 
     .margin-moble {
@@ -613,33 +938,33 @@ footer {
         object-fit: none;
         object-position: 49% 40%;
     }
+
     .margin-last {
         margin-right: 0;
     }
-  
-    #left{
-   
-        background-color:unset;
-        margin-left:-20px;
-    
+
+    #left {
+        background-color: unset;
+        margin-left: -20px;
     }
-    #left img{
-        width:320px;
-        
-    }
+
+    #left img {
+            width: 320px;
+        }
+
     aside {
         border-radius: unset;
-        margin-left:-26px;
-        margin-right:8px;
+        margin-left: -26px;
+        margin-right: 8px;
     }
 
     .aside-child {
-    
-        width:320px;
+        width: 320px;
     }
-    .marseille-logement{
-        justify-content:center;
-        flex-direction:column-reverse;
+
+    .marseille-logement {
+        justify-content: center;
+        flex-direction: column-reverse;
     }
 
 
@@ -648,10 +973,11 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
-        margin-right:-14px;
+        margin-right: -14px;
     }
-    #item-1{
-        padding-top:20px;
+
+    #item-1 {
+        padding-top: 20px;
     }
 
     .navbar {
@@ -679,7 +1005,7 @@ footer {
     nav .item-4 {
         order: 1;
         font-weight: bolder;
-        margin-right:-30px;
+        margin-right: -30px;
     }
 
     hr {
@@ -687,7 +1013,7 @@ footer {
         height: 3px;
         background-color: #F2F2F2;
         border: 0;
-        margin-right:-16px;
+        margin-right: -16px;
     }
 
         hr::after {
@@ -699,12 +1025,11 @@ footer {
     /**filter*/
 
     .title-3 {
-        margin-left:-10px;
-      
+        margin-left: -10px;
     }
 
     .filter p {
         flex-basis: 100%;
     }
 }
-/****/
+/** End**/
