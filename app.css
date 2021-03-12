@@ -41,18 +41,19 @@
     margin-left: 15px;
 }
 
-.item-2{
+.item-2 {
+    border-top: 1.5px solid white;
     padding-top: 28px;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 10px;
-    margin-top:-22px;
-    flex: 3; 
+    margin-top: -22px;
+    flex: 3;
 }
 
 
 .item-2:hover {
-        border-top: 1.5px solid #0094ff;
+        border-color: #0094ff;
   }
 
 .item-3 {
@@ -63,19 +64,18 @@
 
 .item-4 {
     flex: 2;
+    border-top: 1.5px solid white;
     padding-top: 28px;
     padding-left: 10px;
     padding-right: 10px;
     margin: 10px;
-    margin-right:-10px;
+    margin-right: -10px;
     margin-top: -22px;
     font-weight: bolder;
 }
 .item-4:hover {
-        border-top: 1.5px solid #0094ff;
-        
-     
-       
+        border-color: #0094ff;
+           
     }
 
 
@@ -111,6 +111,7 @@ ul li {
 .div-search {
     display: flex;
     flex-direction: row;
+   
     
 }
 a.icon {
@@ -916,14 +917,18 @@ footer {
 }
 
 /***Moblie version*********************************************************************************************************/
-@media only screen and (max-width:680px) {
+@media only screen and (max-width:680px) and (min-width:344px) {
     .item-2:hover {
         border-top: unset;
+    }
+    .container{
+       
     }
     .item-4:hover {
         border-top: unset;
     }
     .marseille-logement {
+        
     }
 
     .rating {
@@ -940,8 +945,8 @@ footer {
     }
 
 
-    #activite {
-        margin-left: 5px;
+    #activite figure {
+     
     }
 
     .margin-moble {
@@ -953,7 +958,7 @@ footer {
     }
 
     #activite img {
-        width: 320px;
+        width: 275px;
         height: 130px;
         object-fit: none;
         object-position: 49% 40%;
@@ -965,12 +970,24 @@ footer {
 
     #left {
         background-color: unset;
-        margin-left: -20px;
+        margin-left: -60px;
+        justify-content:unset;
+        justify-content:space-around;
+
     }
 
+    #left .item-1{
+        margin-left:50px;
+    }
+    .afficher-plus {
+        margin-left: 60px;
+    }
+    #activite .title-3{
+
+    }
     #left img {
-            width: 320px;
-        }
+        width: 275px;
+    }
 
     aside {
         border-radius: unset;
@@ -979,7 +996,7 @@ footer {
     }
 
     .aside-child {
-        width: 320px;
+        width: 310px;
     }
 
     .marseille-logement {
@@ -993,7 +1010,7 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: flex-start;
-        margin-right: -14px;
+       
     }
 
     #item-1 {
@@ -1034,6 +1051,207 @@ footer {
         background-color: #F2F2F2;
         border: 0;
         margin-right: -16px;
+    }
+
+        hr::after {
+            content: '';
+            display: block;
+            border-bottom: 3px solid #0094ff;
+            max-width: 50%;
+        }
+    /**filter*/
+
+    .title-3 {
+        margin-left: -10px;
+
+    }
+
+    .filter p {
+        flex-basis: 100%;
+    }
+}
+
+/**small divice <= 320px*/
+@media only screen and (max-width:343px) {
+   
+    .container {
+       margin-left:10px;
+        margin-right: unset;
+        max-width:300px;
+        
+    }
+
+    a.search {
+        
+        padding: 10px;
+       
+    }
+   
+    input {
+        padding: 10px;
+        width: 100px;
+        border-color: #F2F2F2;
+    }
+    .item-2:hover {
+        border-top: unset;
+    }
+
+    .item-4:hover {
+        border-top: unset;
+    }
+
+    .marseille-logement {
+        margin-left:-10px;
+        max-width:280px;
+    }
+
+    .rating {
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
+
+    .filter > div {
+        margin-left: -5px;
+    }
+
+    .margin-none {
+        margin: unset;
+    }
+
+
+    #activite {
+       
+        margin:unset;
+
+    }
+
+    .margin-moble {
+        margin-top: 40px;
+    }
+
+    #activite card:not(activite-child) {
+        margin-bottom: 40px;
+    }
+
+    #activite img {
+        width: 270px;
+        height: 130px;
+        object-fit: none;
+        object-position: 49% 40%;
+    }
+    #activite .title-3{
+        margin-left:20px;
+    }
+    .margin-last {
+        margin-right: 0;
+    }
+
+    #left {
+        background-color: unset;
+        margin-left:10px;
+    }
+
+        #left img {
+            width: 260px;
+        }
+
+    aside {
+        border-radius: unset;
+        background-color: #F2F2F2;
+        margin-left: 10px;
+        flex-basis: 275px;
+    }
+        aside img {
+            width: 140px;
+            height: 180px;
+        }
+            .aside-child {
+             width: 260px;
+                  
+    }
+    .aside div {
+        margin-right: unset;
+        margin-left: unset;
+    }
+
+    .aside figure {
+        margin-right: unset;
+        margin-left: unset;
+        margin:3px;
+    }
+
+
+    .marseille-logement {
+        justify-content: center;
+        flex-direction: column-reverse;
+        min-width:300px;
+        
+       
+    }
+
+
+
+    footer {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+       
+       
+    }
+
+    #item-1 {
+        padding-top: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+       
+        
+    }
+
+    .navbar li {
+            flex-basis: 45%;
+        }
+
+    nav .item-1 {
+        order: 0;
+       
+    }
+
+    nav .item-2 {
+        border: none;
+        order: 2;
+       margin-left:-45px;
+       margin-right:-40px;
+       
+    }
+
+    nav .item-3 {
+        order: 3;
+        padding-bottom:unset;
+        margin-left:40px;
+    }
+
+    nav .item-4 {
+        order: 1;
+        font-weight: bolder;
+        margin-right:-10px;
+        margin-left:20px;
+        border:unset;
+        padding-right:unset;
+        padding-top:unset;
+        margin-top:10px;
+        padding-right:unset;
+    }
+
+    hr {
+        margin-top: -25px;
+        height: 3px;
+        background-color: #F2F2F2;
+        border: 0;
+       
+     
+       
     }
 
         hr::after {
